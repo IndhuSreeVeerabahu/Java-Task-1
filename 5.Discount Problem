@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double purchaseAmount = sc.nextDouble();
+        double discount = 0;
+        if (purchaseAmount >= 500 && purchaseAmount <= 1000) {
+            discount = 0.10 * purchaseAmount;
+        } else if (purchaseAmount > 1000) {
+            discount = 0.20 * purchaseAmount;
+        }
+        double finalAmount = purchaseAmount - discount;
+        System.out.printf("%.2f", finalAmount);
+    }
+}
